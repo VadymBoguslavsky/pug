@@ -1,26 +1,87 @@
+@media (min-width:769px) {
+    .main__wrapper {
+        .lower__text,
+        .plus__text {
+            font-size: 48px;
+        }
+        .upper__text {
+            font-size: 30px;
+        }
+        .form__wrapper {
+            max-width: 562px;
+            .form {
+                .form1,
+                .form2 {
+                    width: 48%;
+                }
+                .submit {
+                    padding: 32px 92px;
+                }
+                .birthday {
+                    width: 30.5%;
+                }
+            }
+        }
+    }
+    .footer {
+        .footer__payment {
+            padding: 0 20px;
+            margin: 30px;
+        }
+        .footer__payment2 {
+            text-align: center;
+        }
+    }
+}
+
 @media (min-width:320px) and (max-width: 768px) {
     .wrapper {
         background-image: url("../../bg/low.png");
     }
-    .form__wrapper {
-        max-width: 320px;
-        margin: 0 auto;
-        max-height: 100%
+    .main__wrapper {
+        .upper__text {
+            font-size: 18px;
+        }
+        .lower__text,
+        .plus__text {
+            font-size: 35px;
+        }
+        .form__wrapper {
+            max-width: 320px;
+            margin: 0 auto;
+            .form {
+                .form1,
+                .form2 {
+                    width: 100%;
+                }
+                .back {
+                    position: absolute;
+                    left: 99px;
+                    bottom: -89px;
+                }
+                .submit {
+                    padding: 24px 57px;
+                }
+                .birthday {
+                    width: 30.9%
+                }
+            }
+        }
     }
-    .lower__text,
-    .plus__text {
-        font-size: 35px;
-    }
-    .form1,
-    .form2 {
-        width: 100%;
-    }
-    .back {
-        position: absolute;
-        left: 99px;
-        bottom: -89px;
-    }
-    .submit {
-        padding: 24px 57px;
+    .footer {
+        .footer__wrapper {
+            max-width: 320px;
+        }
+        .footer__payment {
+            display: grid;
+            margin-top: 30px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+        }
+        .footer__payment2 {
+            text-align: inherit;
+            margin-top: 30px;
+        }
     }
 }

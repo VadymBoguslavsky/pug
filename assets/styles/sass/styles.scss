@@ -1,7 +1,6 @@
 .wrapper {
     background-image: url("../../bg/weekend.png");
     background-repeat: no-repeat;
-    height: 100vh;
     background-size: 100% 100%;
     font-family: Roboto, sans-serif;
 }
@@ -9,9 +8,11 @@
 .main__wrapper {
     max-width: 770px;
     margin: 0 auto;
+    form {
+        margin-bottom: 0;
+    }
     .form__wrapper {
-        max-width: 562px;
-        height: 100%;
+        padding-bottom: 95px;
         background-color: rgba($color: #000000, $alpha: 0.5);
         .logo {
             padding-top: 20px;
@@ -22,7 +23,6 @@
         }
         .upper__text {
             margin-top: 20px;
-            font-size: 30px;
             font-weight: 400;
             color: white;
         }
@@ -30,13 +30,12 @@
         .plus__text {
             margin-top: 26px;
             margin-bottom: 0;
-            font-size: 48px;
             font-weight: bold;
             color: #fed22a;
         }
         .form {
             padding: 0 20px;
-            & input {
+            input {
                 border: 2px solid #aaaaaa;
                 border-radius: 2px;
                 box-sizing: border-box;
@@ -51,7 +50,7 @@
             & select:hover {
                 border-color: white
             }
-            & .birthday {
+            .birthday {
                 width: 30.5%;
                 color: #888888;
                 &:nth-child(3) {
@@ -144,7 +143,6 @@
                 justify-content: center;
                 align-items: center;
                 margin-top: 75px;
-                margin-bottom: 85px;
             }
             .back {
                 color: white;
@@ -169,7 +167,6 @@
             .submit {
                 background-color: #fed22a;
                 border-radius: 5px;
-                padding: 32px 92px;
                 border: none;
                 font-size: 28.5px;
                 font-weight: bold;
@@ -188,7 +185,6 @@
         }
         .form1,
         .form2 {
-            width: 48%;
             display: inline-block;
         }
     }
@@ -210,12 +206,8 @@
     .footer__payment {
         display: flex;
         justify-content: space-between;
-        padding: 0 20px;
-        margin: 30px;
     }
-    .footer__payment2 {
-        text-align: center;
-    }
+
     .footer__payment2 img:nth-child(2) {
         margin: 0 70px;
     }
