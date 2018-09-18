@@ -4,15 +4,23 @@
     }
     .form__wrapper {
         max-width: 320px;
-        height: 100%;
         margin: 0 auto;
+        max-height: 100%
     }
     .lower__text,
     .plus__text {
         font-size: 35px;
     }
-    .form1, .form2{
-      width: 100%;
+    .form1,
+    .form2 {
+        width: 100%;
     }
-
+    .back {
+        position: absolute;
+        left: 99px;
+        bottom: -89px;
+    }
+    .submit {
+        padding: 24px 57px;
+    }
 }
