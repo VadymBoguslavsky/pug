@@ -16,35 +16,60 @@ html
                   p.upper__text  Welcome bonus
                   p.lower__text 100% up to €500
                   p.plus__text +200 free spins
-                  p.step Step 2/2
-                form.form
-                  div.form1
-                    input.name(type="text" name="name" placeholder="Name")
-                    input.birthday(type="number" name="day" placeholder="DD" min="1" max="31")
-                    input.birthday(type="number" name="month" placeholder="MM" min="1" max="12")
-                    input.birthday(type="number" name="year" placeholder="YY" min="1900" max="2018")
-                    input.city(type="text" name="city" placeholder="City")
-                    input.address(type="text" name="address" placeholder="Address")
-                  div.form2
-                    input.last__name(type="text" name="last__name" placeholder="Last Name")
-                    select.select
-                      option(value="1" selected  disabled="disabled" hidden="hidden") County
-                      option(value="2") Country
-                    input.postcode(type="text" name="postcode" placeholder="Postcode")
-                    div.phone
-                      select.select2
-                        option(value="1" selected  disabled="disabled" hidden="hidden") +3 80
-                    input.phone__number(type="number" name="postcode" placeholder="_ _ _ _")
-                  .radio
-                    label.container Male
-                      input(type="radio" checked="checked" name="radio")
-                      span.checkmark
-                    label.container Female
-                      input(type="radio" name="radio")
-                      span.checkmark
-                  .buttons
-                    button.back Back
-                    button.submit(type="submit") Registration     
+                form.form(id="regForm")
+                  .tab
+                    p.step Step 1/2
+                      input(type="email" name="email" placeholder="Email")
+                      input(type="text" name="login" placeholder="Login")
+                      input(type="password" name="password" placeholder="Password")
+                      select.currency
+                        option(value="1" selected  disabled="disabled" hidden="hidden") Currency
+                        option(value="2") Currency
+                      fieldset
+                        legend.promolabel(for="promocode") Promocode
+                        input.promocode(type="promocode" id="promocode" name="promocode" value="BIG WIN")
+                      label.check
+                        span I accept 
+                        a.terms Terms&Conditions
+                        input(type="checkbox" checked="checked")
+                        span.mark
+                      label.check I consent to receiving exclusive bonuses and promotions by email
+                        input(type="checkbox" checked="checked")
+                        span.mark
+                      label.check I consent processing of my personal data 
+                        input(type="checkbox" checked="checked")
+                        span.mark
+                      .btn
+                        button.nextbtn(type="button"  id="nextBtn" onclick="nextPrev(1)") NEXT STEP  
+                  .tab
+                    p.step Step 2/2
+                    div.form1
+                      input.name(type="text" name="name" placeholder="Name")
+                      input.birthday(type="number" name="day" placeholder="DD" min="1" max="31")
+                      input.birthday(type="number" name="month" placeholder="MM" min="1" max="12")
+                      input.birthday(type="number" name="year" placeholder="YY" min="1900" max="2018")
+                      input.city(type="text" name="city" placeholder="City")
+                      input.address(type="text" name="address" placeholder="Address")
+                    div.form2
+                      input.last__name(type="text" name="last__name" placeholder="Last Name")
+                      select.select
+                        option(value="1" selected  disabled="disabled" hidden="hidden") County
+                        option(value="2") Country
+                      input.postcode(type="text" name="postcode" placeholder="Postcode")
+                      div.phone
+                        select.select2
+                          option(value="1" selected  disabled="disabled" hidden="hidden") +3 80
+                      input.phone__number(type="number" name="postcode" placeholder="_ _ _ _")
+                    .radio
+                      label.container Male
+                        input(type="radio" checked="checked" name="radio")
+                        span.checkmark
+                      label.container Female
+                        input(type="radio" name="radio")
+                        span.checkmark
+                    .buttons
+                      button.back(id="prevBtn" onclick="nextPrev(-1)") Back
+                      button.submit(type="button") Registration     
         footer.footer
           .footer__wrapper
             .footer__text
@@ -60,7 +85,7 @@ html
               img(src="assets/bg/klarna.png", alt="")
               img(src="assets/bg/multiblamco.png", alt="")
               img(src="assets/bg/payment_systems_yoyo_boleto.png", alt="")
-            .copytight
+            .copyright
               p 2018 © ZetCasino.com All rights reserved
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")

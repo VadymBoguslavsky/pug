@@ -71,6 +71,101 @@
                 -webkit-appearance: none;
                 margin: 0;
             }
+            .terms {
+                text-decoration: underline;
+            }
+            fieldset {
+                height: 48px;
+                padding: 0;
+                position: relative;
+                margin: 0;
+            }
+            .btn {
+                position: relative;
+                height: 100px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .tab {
+                display: none;
+            }
+            .nextbtn {
+                background-color: #fed22a;
+                border-radius: 5px;
+                border: none;
+                font-size: 28.5px;
+                font-weight: bold;
+                margin: 0 auto;
+                padding: 32px 92;
+                cursor: pointer;
+            }
+            .promocode {
+                border: 2px solid #4acc3f;
+                border: none;
+                position: absolute;
+                top: -2px;
+                color: white;
+                font-weight: bold;
+            }
+            .promolabel {
+                color: #4acc3f;
+                position: relative;
+                z-index: 1;
+            }
+            .check {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-top: 20px;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: 400;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: white;
+            }
+            .check input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+            .mark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: black;
+                border: 1px solid white;
+            }
+            .check:hover input~.mark {
+                background-color: black;
+            }
+            .check input:checked~.mark {
+                background-color: #4acc3f;
+                border: none;
+            }
+            .mark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            .check input:checked~.mark:after {
+                display: block;
+            }
+            .check .mark:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
             .radio {
                 text-align: left;
                 padding-top: 30px;
@@ -154,6 +249,7 @@
                 margin-left: 10px;
                 position: absolute;
                 left: 0;
+                cursor: pointer;
             }
             .back::before {
                 content: "";
@@ -172,6 +268,7 @@
                 font-weight: bold;
                 position: absolute;
                 right: 0;
+                cursor: pointer;
             }
         }
         .step {
@@ -207,11 +304,10 @@
         display: flex;
         justify-content: space-between;
     }
-
     .footer__payment2 img:nth-child(2) {
         margin: 0 70px;
     }
-    .copytight {
+    .copyright {
         margin: 30px;
         color: white;
         font-size: 12px;
