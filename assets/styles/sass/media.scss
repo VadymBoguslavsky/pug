@@ -1,0 +1,14 @@
+@media (min-width:320px) and (max-width: 768px) {
+    .wrapper {
+        background-image: url("../../bg/low.png");
+    }
+    .form__wrapper {
+        max-width: 320px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .lower__text,
+    .plus__text {
+        font-size: 35px;
+    }
+}

@@ -3,7 +3,8 @@ html
         link(href='assets/styles/css/normalize.css', rel='stylesheet')
         link(href='assets/styles/css/selectric.css', rel='stylesheet')
         link(href='assets/styles/css/styles.css', rel='stylesheet')
-        title This is my first Pug file
+        link(href='assets/styles/css/media.css', rel='stylesheet')
+        title Zet
     body
 
         section.wrapper
@@ -45,9 +46,22 @@ html
                     button.back Back
                     button.submit(type="submit") Registration     
         footer.footer
-          .footer__text
-            p Zetcasino.com is operated by Araxio Development N.V., a company registered and establisher under the laws of curacao and its wholly owned subsdiary Tranelli Ltd, a company incorporated under the laws of Cyprys with a company registration number HE363026 and having its registered office at Grigory Afxentiou,133, Agios Dometius,2369,Nikosia,Cyprus. Araxio development N.V./IS licensed and regulated by antillephone N.V. Araxio DEvelopment N.V.s registration  number is 141409 its registrated address is e-commerce park vredenberg, Curacao. Customer Support Team is available 24/7 via e-mail support@zetcasino.com, Live Chat, or phone + 356 3550 0425
-
+          .footer__wrapper
+            .footer__text
+              p Zetcasino.com is operated by Araxio Development N.V., a company registered and establisher under the laws of curacao and its wholly owned subsdiary Tranelli Ltd, a company incorporated under the laws of Cyprys with a company registration number HE363026 and having its registered office at Grigory Afxentiou,133, Agios Dometius,2369,Nikosia,Cyprus. Araxio development N.V./IS licensed and regulated by antillephone N.V. Araxio DEvelopment N.V.s registration  number is 141409 its registrated address is e-commerce park vredenberg, Curacao. Customer Support Team is available 24/7 via e-mail support@zetcasino.com, Live Chat, or phone + 356 3550 0425
+            .footer__payment
+              img(src="assets/bg/visa.png", alt="")
+              img(src="assets/bg/mastercard.png", alt="")
+              img(src="assets/bg/skrill.png", alt="")
+              img(src="assets/bg/neteller.png", alt="")
+              img(src="assets/bg/paysafecard.png", alt="")
+              img(src="assets/bg/banktransfer.png", alt="")
+            .footer__payment2
+              img(src="assets/bg/klarna.png", alt="")
+              img(src="assets/bg/multiblamco.png", alt="")
+              img(src="assets/bg/payment_systems_yoyo_boleto.png", alt="")
+            .copytight
+              p 2018 © ZetCasino.com All rights reserved
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         script(src="assets/js/jquery.selectric.min.js")

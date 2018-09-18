@@ -1,205 +1,229 @@
-.wrapper{
+.wrapper {
     background-image: url("../../bg/weekend.png");
     background-repeat: no-repeat;
+    height: 100vh;
     background-size: 100% 100%;
     font-family: Roboto, sans-serif;
 }
-.main__wrapper{
+
+.main__wrapper {
     max-width: 770px;
     margin: 0 auto;
-    .form__wrapper{
+    .form__wrapper {
         max-width: 562px;
         height: 100%;
-        background-color:rgba($color: #000000, $alpha: 0.5);
-        .logo{
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        .logo {
             padding-top: 20px;
             text-align: center;
         }
-        .text{
-          margin: 0 20px;
+        .text {
+            margin: 0 20px;
         }
-        .upper__text{
+        .upper__text {
             margin-top: 20px;
             font-size: 30px;
             font-weight: 400;
             color: white;
         }
-        .lower__text, 
-        .plus__text{
+        .lower__text,
+        .plus__text {
             margin-top: 26px;
-            margin-bottom: 0; 
+            margin-bottom: 0;
             font-size: 48px;
             font-weight: bold;
             color: #fed22a;
         }
-        .form{
-          padding: 0 20px;
-          & input{
-            border: 2px solid #aaaaaa;
-            border-radius: 2px;
-            box-sizing: border-box;
-            padding: 13px 15px;
-            width: 100%;
-            height: 40px;
-            margin: 10px 0;
-            color: #888888;
-            background-color: #000000;
-          }
-          & input:hover,
-          & select:hover{
-            border-color: white
-          }
-          & .birthday{
-            width: 30.5%;
-            color: #888888;
-            &:nth-child(3){
-              margin: 0 10px;
+        .form {
+            padding: 0 20px;
+            & input {
+                border: 2px solid #aaaaaa;
+                border-radius: 2px;
+                box-sizing: border-box;
+                padding: 13px 15px;
+                width: 100%;
+                height: 40px;
+                margin: 10px 0;
+                color: #888888;
+                background-color: #000000;
             }
-          }
-          & .phone{
-            width: 32%;
-            display: inline-grid;
-            position: relative;
-          }
-          & .phone__number{
-            width: 64%;
-            margin-left: 10px;
-            display: inline;
-          }
-          input[type=number]::-webkit-inner-spin-button, 
-          input[type=number]::-webkit-outer-spin-button { 
-            -webkit-appearance: none; 
-            margin: 0; 
-          }
-          .radio{
-            text-align: left;
-            padding-top: 30px;
-            .container:nth-child(2){
-              margin-left: 30px;
+            & input:hover,
+            & select:hover {
+                border-color: white
             }
-            .container {
-              display: inline-block;
-              position: relative;
-              padding-left: 35px;
-              margin-bottom: 12px;
-              cursor: pointer;
-              font-size: 22px;
-              -webkit-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              user-select: none;
-              color: white;
+            & .birthday {
+                width: 30.5%;
+                color: #888888;
+                &:nth-child(3) {
+                    margin: 0 10px;
+                }
             }
-            /* Hide the browser's default radio button */
-            .container input {
+            & .phone {
+                width: 32%;
+                display: inline-grid;
+                position: relative;
+            }
+            & .phone__number {
+                width: 64%;
+                margin-left: 10px;
+                display: inline;
+            }
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            .radio {
+                text-align: left;
+                padding-top: 30px;
+                .container:nth-child(2) {
+                    margin-left: 30px;
+                }
+                .container {
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    font-size: 22px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    color: white;
+                }
+                /* Hide the browser's default radio button */
+                .container input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                /* Create a custom radio button */
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    background-color: black;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                }
+                /* On mouse-over, add a grey background color */
+                .container:hover input~.checkmark {
+                    background-color: black;
+                }
+                /* When the radio button is checked, add a blue background */
+                .container input:checked~.checkmark {
+                    background-color: black;
+                    border: 3px solid #4acc3f;
+                }
+                /* Create the indicator (the dot/circle - hidden when not checked) */
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                /* Show the indicator (dot/circle) when checked */
+                .container input:checked~.checkmark:after {
+                    display: block;
+                }
+                /* Style the indicator (dot/circle) */
+                .container .checkmark:after {
+                    top: 3px;
+                    left: 3px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: #4acc3f;
+                }
+            }
+            .buttons {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 75px;
+                margin-bottom: 85px;
+            }
+            .back {
+                color: white;
+                text-decoration: underline;
+                font-size: 18px;
+                font-weight: bolder;
+                background: transparent;
+                border: none;
+                margin-left: 10px;
                 position: absolute;
-                opacity: 0;
-                cursor: pointer;
-            }
-            /* Create a custom radio button */
-            .checkmark {
-                position: absolute;
-                top: 0;
                 left: 0;
-                height: 20px;
-                width: 20px;
-                background-color: black;
-                border-radius: 50%;
-                border:1px solid white;
             }
-            /* On mouse-over, add a grey background color */
-            .container:hover input ~ .checkmark {
-                background-color: black;
-            }
-            /* When the radio button is checked, add a blue background */
-            .container input:checked ~ .checkmark {
-                background-color: black;
-              border: 3px solid #4acc3f;
-            }
-            /* Create the indicator (the dot/circle - hidden when not checked) */
-            .checkmark:after {
+            .back::before {
                 content: "";
-                position: absolute;
-                display: none;
-            }
-            /* Show the indicator (dot/circle) when checked */
-            .container input:checked ~ .checkmark:after {
+                background-image: url("../../bg/arrow.png");
+                left: -15px;
+                width: 17px;
+                height: 19px;
                 display: block;
+                position: absolute
             }
-            /* Style the indicator (dot/circle) */
-            .container .checkmark:after {
-              top: 3px;
-              left: 3px;
-              width: 14px;
-              height: 14px;
-              border-radius: 50%;
-              background: #4acc3f;
+            .submit {
+                background-color: #fed22a;
+                border-radius: 5px;
+                padding: 32px 92px;
+                border: none;
+                font-size: 28.5px;
+                font-weight: bold;
+                position: absolute;
+                right: 0;
             }
-          }
-          .buttons{
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-top: 75px;
-            margin-bottom: 85px;
-          }
-          .back{
-              color: white;
-              text-decoration: underline;
-              font-size: 18px;
-              font-weight: bolder;
-              background: transparent;
-              border: none;
-              margin-left: 10px;
-              position: absolute;
-              left: 0;
-          }
-          .back::before{
-              content: "" ;
-              background-image: url("../../bg/arrow.png");
-              left: -15px;
-              width: 17px;
-              height: 19px;
-              display: block;
-              position: absolute
-          }
-          .submit{
-              background-color: #fed22a;
-              border-radius: 5px;
-              padding: 32px 92px;
-              border: none;
-              font-size: 28.5px;
-              font-weight: bold;
-              position: absolute;
-              right: 0;
-          }
         }
-        .step{
-          color: #888888;
-          margin: 30px 0 0 0;
-          font-weight: bold;
-          font-size: 13px;
+        .step {
+            color: #888888;
+            margin: 30px 0 0 0;
+            font-weight: bold;
+            font-size: 13px;
         }
-        .form1{
-          margin-right: 20px;
+        .form1 {
+            margin-right: 20px;
         }
-        .form1, 
-        .form2{
-          width: 48%;
-          display: inline-block;
+        .form1,
+        .form2 {
+            width: 48%;
+            display: inline-block;
         }
     }
 }
-.footer{
-  background-color: #333333;
-  padding: 28px 0 35px 0;
-  .footer__text{
-    max-width: 696px;
-    margin: 0 auto;
-    color: #cccccc;
-    font-size: 12px;
-    line-height: 1.5;
-  }
+
+.footer {
+    background-color: #333333;
+    padding: 28px 0 35px 0;
+    font-family: Roboto, sans-serif;
+    .footer__wrapper {
+        max-width: 696px;
+        margin: 0 auto;
+    }
+    .footer__text {
+        color: #cccccc;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .footer__payment {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin: 30px;
+    }
+    .footer__payment2 {
+        text-align: center;
+    }
+    .footer__payment2 img:nth-child(2) {
+        margin: 0 70px;
+    }
+    .copytight {
+        margin: 30px;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+    }
 }
