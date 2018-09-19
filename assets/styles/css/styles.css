@@ -8,7 +8,8 @@
   max-width: 770px;
   margin: 0 auto; }
   .main__wrapper form {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    display: inline-table; }
   .main__wrapper .form__wrapper {
     padding-bottom: 95px;
     background-color: rgba(0, 0, 0, 0.5); }
@@ -38,7 +39,9 @@
         height: 40px;
         margin: 10px 0;
         color: #888888;
-        background-color: #000000; }
+        background-color: #000000;
+        font-family: Roboto, sans-serif;
+        font-weight: 900; }
       .main__wrapper .form__wrapper .form input .focus:hover,
       .main__wrapper .form__wrapper .form select .focus:hover {
         border-color: white; }
@@ -86,7 +89,7 @@
         font-size: 24px;
         font-weight: bold;
         margin: 0 auto;
-        padding: 32px 92;
+        padding: 32px 78px;
         cursor: pointer; }
       .main__wrapper .form__wrapper .form .promocode {
         border: none;
@@ -114,7 +117,8 @@
       .main__wrapper .form__wrapper .form .check input {
         position: absolute;
         opacity: 0;
-        cursor: pointer; }
+        cursor: pointer;
+        width: 0; }
       .main__wrapper .form__wrapper .form .mark {
         position: absolute;
         top: -4px;
@@ -238,7 +242,8 @@
     .main__wrapper .form__wrapper .step {
       color: #888888;
       margin: 30px 0 0 0;
-      font-size: 13px; }
+      font-size: 13px;
+      font-weight: 900; }
     .main__wrapper .form__wrapper .left_form {
       margin-right: 20px; }
     .main__wrapper .form__wrapper .left_form,
