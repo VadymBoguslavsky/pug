@@ -6,8 +6,8 @@
     font-size: 30px; }
   .main__wrapper .form__wrapper {
     max-width: 562px; }
-    .main__wrapper .form__wrapper .form .form1,
-    .main__wrapper .form__wrapper .form .form2 {
+    .main__wrapper .form__wrapper .form .left_form,
+    .main__wrapper .form__wrapper .form .right_form {
       width: 48%; }
     .main__wrapper .form__wrapper .form .submit {
       padding: 32px 92px; }
@@ -16,7 +16,7 @@
   .footer .footer__payment {
     padding: 0 20px;
     margin: 30px; }
-  .footer .footer__payment2 {
+  .footer .footer__payment-short {
     text-align: center; } }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -30,8 +30,8 @@
   .main__wrapper .form__wrapper {
     max-width: 320px;
     margin: 0 auto; }
-    .main__wrapper .form__wrapper .form .form1,
-    .main__wrapper .form__wrapper .form .form2 {
+    .main__wrapper .form__wrapper .form .left_form,
+    .main__wrapper .form__wrapper .form .right_form {
       width: 100%; }
     .main__wrapper .form__wrapper .form .back {
       position: absolute;
@@ -49,6 +49,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 30px; }
-  .footer .footer__payment2 {
+  .footer .footer__payment-short {
     text-align: inherit;
     margin-top: 30px; } }

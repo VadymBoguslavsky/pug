@@ -1,5 +1,7 @@
 html  
     head
+        meta(content="width=device-width, initial-scale=1.0" name="viewport")
+        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
         link(href='assets/styles/css/normalize.css', rel='stylesheet')
         link(href='assets/styles/css/selectric.css', rel='stylesheet')
         link(href='assets/styles/css/styles.css', rel='stylesheet')
@@ -19,47 +21,47 @@ html
                 form.form(id="regForm")
                   .tab
                     p.step Step 1/2
-                      input(type="email" name="email" placeholder="Email")
-                      input(type="text" name="login" placeholder="Login")
+                      input.focus(type="email" name="email" placeholder="Email")
+                      input.focus(type="text" name="login" placeholder="Login")
                       input(type="password" name="password" placeholder="Password")
                       select.currency
                         option(value="1" selected  disabled="disabled" hidden="hidden") Currency
                         option(value="2") Currency
                       fieldset
-                        legend.promolabel(for="promocode") Promocode
-                        input.promocode(type="promocode" id="promocode" name="promocode" value="BIG WIN")
+                        legend.promolabel.focus(for="promocode") Promocode
+                        input.promocode.focus(type="promocode" id="promocode" name="promocode" value="BIG WIN")
                       label.check
                         span I accept 
                         a.terms Terms&Conditions
-                        input(type="checkbox" checked="checked")
+                        input.focus(type="checkbox" checked="checked")
                         span.mark
                       label.check I consent to receiving exclusive bonuses and promotions by email
-                        input(type="checkbox" checked="checked")
+                        input.focus(type="checkbox" checked="checked")
                         span.mark
                       label.check I consent processing of my personal data 
-                        input(type="checkbox" checked="checked")
+                        input.focus(type="checkbox" checked="checked")
                         span.mark
                       .btn
                         button.nextbtn(type="button"  id="nextBtn" onclick="nextPrev(1)") NEXT STEP  
                   .tab
                     p.step Step 2/2
-                    div.form1
-                      input.name(type="text" name="name" placeholder="Name")
-                      input.birthday(type="number" name="day" placeholder="DD" min="1" max="31")
-                      input.birthday(type="number" name="month" placeholder="MM" min="1" max="12")
-                      input.birthday(type="number" name="year" placeholder="YY" min="1900" max="2018")
-                      input.city(type="text" name="city" placeholder="City")
-                      input.address(type="text" name="address" placeholder="Address")
-                    div.form2
-                      input.last__name(type="text" name="last__name" placeholder="Last Name")
-                      select.select
+                    div.left_form
+                      input.name.focus(type="text" name="name" placeholder="Name")
+                      input.birthday.focus(type="number" name="day" placeholder="DD" min="1" max="31")
+                      input.birthday.focus(type="number" name="month" placeholder="MM" min="1" max="12")
+                      input.birthday.focus(type="number" name="year" placeholder="YY" min="1900" max="2018")
+                      input.city.focus(type="text" name="city" placeholder="City")
+                      input.address.focus(type="text" name="address" placeholder="Address")
+                    div.right_form
+                      input.last__name.focus(type="text" name="last__name" placeholder="Last Name")
+                      select.country__select
                         option(value="1" selected  disabled="disabled" hidden="hidden") County
                         option(value="2") Country
-                      input.postcode(type="text" name="postcode" placeholder="Postcode")
+                      input.postcode.focus(type="text" name="postcode" placeholder="Postcode")
                       div.phone
-                        select.select2
+                        select.code__select
                           option(value="1" selected  disabled="disabled" hidden="hidden") +3 80
-                      input.phone__number(type="number" name="postcode" placeholder="_ _ _ _")
+                      input.phone__number.focus(type="number" name="postcode" placeholder="_ _ _ _")
                     .radio
                       label.container Male
                         input(type="radio" checked="checked" name="radio")
@@ -68,8 +70,8 @@ html
                         input(type="radio" name="radio")
                         span.checkmark
                     .buttons
-                      button.back(id="prevBtn" onclick="nextPrev(-1)") Back
-                      button.submit(type="button") Registration     
+                      button.back(type="button" id="prevBtn" onclick="nextPrev(-1)") Back
+                      button.submit(type="submit") Registration     
         footer.footer
           .footer__wrapper
             .footer__text
@@ -81,7 +83,7 @@ html
               img(src="assets/bg/neteller.png", alt="")
               img(src="assets/bg/paysafecard.png", alt="")
               img(src="assets/bg/banktransfer.png", alt="")
-            .footer__payment2
+            .footer__payment-short
               img(src="assets/bg/klarna.png", alt="")
               img(src="assets/bg/multiblamco.png", alt="")
               img(src="assets/bg/payment_systems_yoyo_boleto.png", alt="")
@@ -90,4 +92,4 @@ html
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         script(src="assets/js/jquery.selectric.min.js")
-        script(src="assets/js/myJs.js")
+        script(src="assets/js/index.js")

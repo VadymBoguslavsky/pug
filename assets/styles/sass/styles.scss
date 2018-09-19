@@ -1,316 +1,324 @@
 .wrapper {
-    background-image: url("../../bg/weekend.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    font-family: Roboto, sans-serif;
+  background-image: url("../../bg/weekend.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: Roboto, sans-serif;
 }
 
 .main__wrapper {
-    max-width: 770px;
-    margin: 0 auto;
-    form {
-        margin-bottom: 0;
+  max-width: 770px;
+  margin: 0 auto;
+  form {
+    margin-bottom: 0;
+  }
+  .form__wrapper {
+    padding-bottom: 95px;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    .logo {
+      padding-top: 20px;
+      text-align: center;
     }
-    .form__wrapper {
-        padding-bottom: 95px;
-        background-color: rgba($color: #000000, $alpha: 0.5);
-        .logo {
-            padding-top: 20px;
-            text-align: center;
-        }
-        .text {
-            margin: 0 20px;
-        }
-        .upper__text {
-            margin-top: 20px;
-            font-weight: 400;
-            color: white;
-        }
-        .lower__text,
-        .plus__text {
-            margin-top: 26px;
-            margin-bottom: 0;
-            font-weight: bold;
-            color: #fed22a;
-        }
-        .form {
-            padding: 0 20px;
-            input {
-                border: 2px solid #aaaaaa;
-                border-radius: 2px;
-                box-sizing: border-box;
-                padding: 13px 15px;
-                width: 100%;
-                height: 40px;
-                margin: 10px 0;
-                color: #888888;
-                background-color: #000000;
-            }
-            & input:hover,
-            & select:hover {
-                border-color: white
-            }
-            .birthday {
-                width: 30.5%;
-                color: #888888;
-                &:nth-child(3) {
-                    margin: 0 10px;
-                }
-            }
-            & .phone {
-                width: 32%;
-                display: inline-grid;
-                position: relative;
-            }
-            & .phone__number {
-                width: 64%;
-                margin-left: 10px;
-            }
-            input[type=number]::-webkit-inner-spin-button,
-            input[type=number]::-webkit-outer-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-            }
-            .terms {
-                text-decoration: underline;
-            }
-            fieldset {
-                height: 48px;
-                padding: 0;
-                position: relative;
-                margin: 0;
-            }
-            .btn {
-                position: relative;
-                height: 100px;
-                text-align: center;
-                margin-top: 20px;
-            }
-            .tab {
-                display: none;
-            }
-            .nextbtn {
-                background-color: #fed22a;
-                border-radius: 5px;
-                border: none;
-                font-size: 28.5px;
-                font-weight: bold;
-                margin: 0 auto;
-                padding: 32px 92;
-                cursor: pointer;
-            }
-            .promocode {
-                border: 2px solid #4acc3f;
-                border: none;
-                position: absolute;
-                top: -2px;
-                color: white;
-                font-weight: bold;
-            }
-            .promolabel {
-                color: #4acc3f;
-                position: relative;
-                z-index: 1;
-            }
-            .check {
-                display: block;
-                position: relative;
-                padding-left: 35px;
-                margin-top: 20px;
-                cursor: pointer;
-                font-size: 20px;
-                font-weight: 400;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-                color: white;
-            }
-            .check input {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-            }
-            .mark {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 25px;
-                width: 25px;
-                background-color: black;
-                border: 1px solid white;
-            }
-            .check:hover input~.mark {
-                background-color: black;
-            }
-            .check input:checked~.mark {
-                background-color: #4acc3f;
-                border: none;
-            }
-            .mark:after {
-                content: "";
-                position: absolute;
-                display: none;
-            }
-            .check input:checked~.mark:after {
-                display: block;
-            }
-            .check .mark:after {
-                left: 9px;
-                top: 5px;
-                width: 5px;
-                height: 10px;
-                border: solid white;
-                border-width: 0 3px 3px 0;
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-            }
-            .radio {
-                text-align: left;
-                padding-top: 30px;
-                .container:nth-child(2) {
-                    margin-left: 30px;
-                }
-                .container {
-                    display: inline-block;
-                    position: relative;
-                    padding-left: 35px;
-                    margin-bottom: 12px;
-                    cursor: pointer;
-                    font-size: 22px;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                    color: white;
-                }
-                /* Hide the browser's default radio button */
-                .container input {
-                    position: absolute;
-                    opacity: 0;
-                    cursor: pointer;
-                }
-                /* Create a custom radio button */
-                .checkmark {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 20px;
-                    width: 20px;
-                    background-color: black;
-                    border-radius: 50%;
-                    border: 1px solid white;
-                }
-                /* On mouse-over, add a grey background color */
-                .container:hover input~.checkmark {
-                    background-color: black;
-                }
-                /* When the radio button is checked, add a blue background */
-                .container input:checked~.checkmark {
-                    background-color: black;
-                    border: 3px solid #4acc3f;
-                }
-                /* Create the indicator (the dot/circle - hidden when not checked) */
-                .checkmark:after {
-                    content: "";
-                    position: absolute;
-                    display: none;
-                }
-                /* Show the indicator (dot/circle) when checked */
-                .container input:checked~.checkmark:after {
-                    display: block;
-                }
-                /* Style the indicator (dot/circle) */
-                .container .checkmark:after {
-                    top: 3px;
-                    left: 3px;
-                    width: 14px;
-                    height: 14px;
-                    border-radius: 50%;
-                    background: #4acc3f;
-                }
-            }
-            .buttons {
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin-top: 75px;
-            }
-            .back {
-                color: white;
-                text-decoration: underline;
-                font-size: 18px;
-                font-weight: bolder;
-                background: transparent;
-                border: none;
-                margin-left: 10px;
-                position: absolute;
-                left: 0;
-                cursor: pointer;
-            }
-            .back::before {
-                content: "";
-                background-image: url("../../bg/arrow.png");
-                left: -15px;
-                width: 17px;
-                height: 19px;
-                display: block;
-                position: absolute
-            }
-            .submit {
-                background-color: #fed22a;
-                border-radius: 5px;
-                border: none;
-                font-size: 28.5px;
-                font-weight: bold;
-                position: absolute;
-                right: 0;
-                cursor: pointer;
-            }
-        }
-        .step {
-            color: #888888;
-            margin: 30px 0 0 0;
-            font-weight: bold;
-            font-size: 13px;
-        }
-        .form1 {
-            margin-right: 20px;
-        }
-        .form1,
-        .form2 {
-            display: inline-block;
-        }
+    .text {
+      margin: 0 20px;
     }
+    .upper__text {
+      margin-top: 20px;
+      font-weight: 400;
+      color: white;
+    }
+    .lower__text,
+    .plus__text {
+      margin-top: 26px;
+      margin-bottom: 0;
+      font-weight: bold;
+      color: #fed22a;
+    }
+    .form {
+      padding: 0 20px;
+      input {
+        border: 1px solid #aaaaaa;
+        border-radius: 2px;
+        box-sizing: border-box;
+        padding: 13px 15px;
+        width: 100%;
+        height: 40px;
+        margin: 10px 0;
+        color: #888888;
+        background-color: #000000;
+      }
+      input .focus:hover,
+      select .focus:hover {
+        border-color: white
+      }
+      input .focus:active,
+      select .focus:active {
+        border-color: white
+      }
+      input .focus:focus,
+      select .focus:focus {
+        border-color: white
+      }
+      .birthday {
+        width: 30.5%;
+        color: #888888;
+        &:nth-child(3) {
+          margin: 0 10px;
+        }
+      }
+      & .phone {
+        width: 32%;
+        display: inline-grid;
+        position: relative;
+      }
+      & .phone__number {
+        width: 64%;
+        margin-left: 10px;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .terms {
+        text-decoration: underline;
+      }
+      fieldset {
+        border: 1px solid #4acc3f !important;
+        height: 49px;
+        padding: 0;
+        position: relative;
+        margin: 0;
+      }
+      .btn {
+        position: relative;
+        height: 100px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .tab {
+        display: none;
+      }
+      .nextbtn {
+        background-color: #fed22a;
+        border-radius: 5px;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 auto;
+        padding: 32px 92;
+        cursor: pointer;
+      }
+      .promocode {
+        border: none;
+        position: absolute;
+        top: -1px;
+        color: white;
+        font-weight: bold;
+      }
+      .promolabel {
+        color: #4acc3f;
+        position: relative;
+        z-index: 1;
+      }
+      .check {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 400;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: white;
+      }
+      .check input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .mark {
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        border: 1px solid #aaaaaa;
+        border-radius: 2px;
+      }
+      .check:hover input~.mark {
+        background-color: black;
+      }
+      .check input:checked~.mark {
+        background-color: #4acc3f;
+        border: none;
+      }
+      .mark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .check input:checked~.mark:after {
+        display: block;
+      }
+      .check .mark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .radio {
+        text-align: left;
+        padding-top: 30px;
+        .container:nth-child(2) {
+          margin-left: 30px;
+        }
+        .container {
+          display: inline-block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          font-size: 22px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          color: white;
+        }
+        /* Hide the browser's default radio button */
+        .container input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+        /* Create a custom radio button */
+        .checkmark {
+          position: absolute;
+          top: 2px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background-color: black;
+          border-radius: 50%;
+          border: 1px solid white;
+        }
+        /* On mouse-over, add a grey background color */
+        .container:hover input~.checkmark {
+          background-color: black;
+        }
+        /* When the radio button is checked, add a blue background */
+        .container input:checked~.checkmark {
+          background-color: black;
+          border: 2px solid #4acc3f;
+        }
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        /* Show the indicator (dot/circle) when checked */
+        .container input:checked~.checkmark:after {
+          display: block;
+        }
+        /* Style the indicator (dot/circle) */
+        .container .checkmark:after {
+          top: 3px;
+          left: 3px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #4acc3f;
+        }
+      }
+      .buttons {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 75px;
+      }
+      .back {
+        color: white;
+        text-decoration: underline;
+        font-size: 18px;
+        font-weight: bolder;
+        background: transparent;
+        border: none;
+        margin-left: 10px;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+      }
+      .back::before {
+        content: "";
+        background-image: url("../../bg/arrow.png");
+        left: -15px;
+        width: 17px;
+        height: 19px;
+        display: block;
+        position: absolute
+      }
+      .submit {
+        background-color: #fed22a;
+        border-radius: 5px;
+        border: none;
+        font-size: 25.8px;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+      }
+    }
+    .step {
+      color: #888888;
+      margin: 30px 0 0 0;
+      font-size: 13px;
+    }
+    .left_form {
+      margin-right: 20px;
+    }
+    .left_form,
+    .right_form {
+      display: inline-block;
+    }
+  }
 }
 
 .footer {
-    background-color: #333333;
-    padding: 28px 0 35px 0;
-    font-family: Roboto, sans-serif;
-    .footer__wrapper {
-        max-width: 696px;
-        margin: 0 auto;
-    }
-    .footer__text {
-        color: #cccccc;
-        font-size: 12px;
-        line-height: 1.5;
-    }
-    .footer__payment {
-        display: flex;
-        justify-content: space-between;
-    }
-    .footer__payment2 img:nth-child(2) {
-        margin: 0 70px;
-    }
-    .copyright {
-        margin: 30px;
-        color: white;
-        font-size: 12px;
-        text-align: center;
-    }
+  background-color: #333333;
+  padding: 28px 0 35px 0;
+  font-family: Roboto, sans-serif;
+  .footer__wrapper {
+    max-width: 696px;
+    margin: 0 auto;
+  }
+  .footer__text {
+    color: #cccccc;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .footer__payment {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__payment-short img:nth-child(2) {
+    margin: 0 70px;
+  }
+  .copyright {
+    margin: 30px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+  }
 }
