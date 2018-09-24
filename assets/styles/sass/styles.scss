@@ -10,7 +10,7 @@
   margin: 0 auto;
   form {
     margin-bottom: 0;
-    display: inline-table;
+    display: block;
   }
   .form__wrapper {
     padding-bottom: 95px;
@@ -74,7 +74,7 @@
         position: relative;
       }
       & .phone__number {
-        width: 64%;
+        width: 63.9%;
         margin-left: 10px;
       }
       input[type=number]::-webkit-inner-spin-button,

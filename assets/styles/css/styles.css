@@ -9,7 +9,7 @@
   margin: 0 auto; }
   .main__wrapper form {
     margin-bottom: 0;
-    display: inline-table; }
+    display: block; }
   .main__wrapper .form__wrapper {
     padding-bottom: 95px;
     background-color: rgba(0, 0, 0, 0.5); }
@@ -61,7 +61,7 @@
         display: inline-grid;
         position: relative; }
       .main__wrapper .form__wrapper .form .phone__number {
-        width: 64%;
+        width: 63.9%;
         margin-left: 10px; }
       .main__wrapper .form__wrapper .form input[type=number]::-webkit-inner-spin-button,
       .main__wrapper .form__wrapper .form input[type=number]::-webkit-outer-spin-button {
